@@ -1,0 +1,91 @@
+/* Container */
+.container-card {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples filas */
+    gap: 10px; /* Espacio entre las tarjetas */
+    justify-content: space-between; /* Distribuye las tarjetas en la fila */
+}
+.navbar{
+    background-color: #007BFF;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    justify-content: flex-end;
+    text-align: center;
+    color:rgb(252, 252, 252)
+}
+.nav-links{
+    display:inline-block;
+    color:rgb(255, 255, 255)
+}
+a{
+    color:aliceblue
+}
+/* Estilo tarjeta */
+.card {
+    flex: 1 1 calc(20% - 20px); 
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: flex-end; /* Centra el contenido verticalmente */
+    min-height: 300px; /* Altura mínima  */
+}
+
+/* Imagen */
+.card img {
+    max-width: 50%; /* Ajusta la imagen para que no se desborde */
+    height: auto; /* Relacion de aspecto */
+    margin-bottom: 10px;
+}
+
+/* Titulo y Desc */
+.titulo, .Descripcion {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1.1em; /* Aumenta el tamaño de fuente para mayor visibilidad */
+}
+
+/* Cuerpo Tarjeta */
+.card-body {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Boton */
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #f50000;
+}
+
+/*Moviles*/
+@media screen and (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Usa el 100 por ciento de la pagina para motrar una tarjeta */
+    }
+}
+
+/*tablets y pantallas intermedias*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(33.3% - 20px); /* usa el 33.3 por ciento de la pagina para mostrar 3 tarjetas y se restan 20 pixeles para las esquinas */
+    }
+}
+
+/*Ordenadores*/
+@media screen and (min-width: 769px) {
+    .card {
+        flex: 1 1 calc(20% - 20); /* usa el 20 por ciento de la pagina para mostrar 5 tarjetas y se restan 20 pixeles para las esquinas */
+    }
+}
